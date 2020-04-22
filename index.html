@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "fontin_sans_small_caps";
+        src: url("webfontkit/fontin_sans_sc_45b-webfont.woff2") format("woff2"),
+          url("webfontkit/fontin_sans_sc_45b-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+      body,
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+      body,
+      button {
+        font-family: fontin_sans_small_caps;
+      }
+      h1 {
+        font-weight: 400;
+        font-size: 3rem;
+        letter-spacing: -0.05rem;
+        background-color: #222;
+        color: #fff;
+      }
+      .logo {
+        height: 3rem;
+        fill: #fff;
+        margin: 7px 14px -7px 14px;
+      }
+      h2 {
+        font-weight: 400;
+        font-size: 1.67rem;
+        letter-spacing: -0.067rem;
+        background-color: #333;
+        color: #ccc;
+        padding: 0.33rem;
+      }
+      @media (min-width: 800px) {
+        #layout {
+          max-width: 56.25vh; /* 16:9 ratio */
+          margin: auto;
+        }
+      }
+      header {
+        height: 23.6vh;
+        background-color: #eee;
+      }
+      #overview {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 0.5rem;
+      }
+      #overview .card {
+        background-color: rgb(170, 158, 130);
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        height: 100%;
+      }
+      #overview h3 {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-align: center;
+        padding: 0 0 0.5rem;
+        border-bottom: 1px solid #333;
+      }
+      #overview ol {
+        margin: 0.5rem 0 0 0;
+        padding: 0 0 0 1rem;
+      }
+      #overview li {
+        margin-top: 0.33rem;
+      }
+      main {
+        height: 38.2vh;
+        background-color: #ddd;
+      }
+      footer {
+        height: 38.2vh;
+        background-color: #ccc;
+      }
+      .btn-weiter {
+        background-color: rgb(213, 57, 0);
+        font-size: 1.25rem;
+        padding: 0.67rem 1.33rem;
+        margin: 0;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="layout">
+      <header>
+        <h1>
+          <img class="logo" src="img/archery.svg" alt="Icon" />DSA Fernkampf
+        </h1>
+        <div id="overview">
+          <div class="card">
+            <h3>Seite #1</h3>
+            <ol>
+              <li>Waffe auswählen</li>
+              <li>Sonderfertig-keiten eingeben</li>
+            </ol>
+          </div>
+          <div class="card">
+            <h3>Kampfsituation</h3>
+            <p>2</p>
+          </div>
+          <div class="card">
+            <h3>Aufschlag</h3>
+            <p>3</p>
+          </div>
+        </div>
+      </header>
+      <main>
+        <h2>1. Waffe auswählen</h2>
+      </main>
+      <footer>
+        <h2>2. Sonderfertigkeiten</h2>
+        <button class="btn-weiter">Click</button>
+      </footer>
+    </div>
+  </body>
+</html>
