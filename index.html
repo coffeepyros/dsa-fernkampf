@@ -12,6 +12,9 @@
         font-weight: normal;
         font-style: normal;
       }
+      * {
+        box-sizing: border-box;
+      }
       body,
       h1,
       h2,
@@ -25,14 +28,18 @@
       h1 {
         font-weight: 400;
         font-size: 3rem;
+        line-height: 4rem;
         letter-spacing: -0.05rem;
         background-color: #222;
         color: #fff;
       }
       .logo {
-        height: 3rem;
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
         fill: #fff;
-        margin: 7px 14px -7px 14px;
+        /* margin: 7px 14px -7px 14px; */
+        background-color: #222;
       }
       h2 {
         font-weight: 400;
@@ -42,6 +49,12 @@
         color: #ccc;
         padding: 0.33rem;
       }
+      #layout {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 23.6fr 38.2fr 38.2fr; /* Golden Ratio */
+      }
       @media (min-width: 800px) {
         #layout {
           max-width: 56.25vh; /* 16:9 ratio */
@@ -49,20 +62,35 @@
         }
       }
       header {
-        height: 23.6vh;
         background-color: #eee;
       }
       #overview {
+        height: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 4rem auto;
+        grid-template-areas:
+          "logo title title title title title"
+          "card-1 card-1 card-2 card-2 card-3 card-3";
         grid-gap: 0.5rem;
+      }
+      #overview h1 {
+        grid-area: title;
+        text-align: center;
       }
       #overview .card {
         background-color: rgb(170, 158, 130);
-        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
         padding: 0.5rem;
-        height: 100%;
+      }
+      #overview .card:nth-of-type(1) {
+        grid-area: card-1;
+      }
+      #overview .card:nth-of-type(2) {
+        grid-area: card-2;
+      }
+      #overview .card:nth-of-type(3) {
+        grid-area: card-3;
       }
       #overview h3 {
         margin: 0;
@@ -80,43 +108,43 @@
         margin-top: 0.33rem;
       }
       main {
-        height: 38.2vh;
         background-color: #ddd;
       }
       footer {
-        height: 38.2vh;
         background-color: #ccc;
       }
       .btn-weiter {
-        background-color: rgb(213, 57, 0);
+        background-color: hsl(16, 100%, 42%);
         font-size: 1.25rem;
         padding: 0.67rem 1.33rem;
         margin: 0;
         border: 0;
+      }
+      .btn-weiter:hover {
+        background-color: hsl(16, 100%, 50%);
       }
     </style>
   </head>
   <body>
     <div id="layout">
       <header>
-        <h1>
-          <img class="logo" src="img/archery.svg" alt="Icon" />DSA Fernkampf
-        </h1>
         <div id="overview">
+          <img class="logo" src="img/archery.svg" alt="Icon" />
+          <h1>DSA Fernkampf</h1>
           <div class="card">
-            <h3>Seite #1</h3>
+            <h3>I<br />Startseite</h3>
             <ol>
-              <li>Waffe auswählen</li>
-              <li>Sonderfertig-keiten eingeben</li>
+              <li>Waffe auswählen.</li>
+              <li>Sonderfertig-keiten eingeben.</li>
             </ol>
           </div>
           <div class="card">
-            <h3>Kampfsituation</h3>
-            <p>2</p>
+            <h3>II<br />Kampfsituation</h3>
+            <p>Div. Modifikatoren (z.B. Entfernung) festlegen.</p>
           </div>
           <div class="card">
-            <h3>Aufschlag</h3>
-            <p>3</p>
+            <h3>III<br />Ergebnis</h3>
+            <p>Aufschläge auf Probe, zusätzliche Aktionen und TP.</p>
           </div>
         </div>
       </header>
