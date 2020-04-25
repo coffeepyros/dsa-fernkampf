@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/css-reset.css" />
     <style>
       @font-face {
         font-family: "fontin_sans_small_caps";
@@ -100,12 +101,16 @@
         padding: 0 0 0.5rem;
         border-bottom: 1px solid #333;
       }
+      #overview ol,
+      #overview p {
+        margin-top: 0.5rem;
+      }
       #overview ol {
-        margin: 0.5rem 0 0 0;
         padding: 0 0 0 1rem;
       }
       #overview li {
         margin-top: 0.33rem;
+        list-style-type: circle;
       }
       main {
         background-color: #ddd;
@@ -132,24 +137,35 @@
           <img class="logo" src="img/archery.svg" alt="Icon" />
           <h1>DSA Fernkampf</h1>
           <div class="card">
-            <h3>I<br />Startseite</h3>
+            <h3>Startseite</h3>
             <ol>
               <li>Waffe auswählen.</li>
               <li>Sonderfertig-keiten eingeben.</li>
             </ol>
           </div>
           <div class="card">
-            <h3>II<br />Kampfsituation</h3>
+            <h3>Kampfsituation</h3>
             <p>Div. Modifikatoren (z.B. Entfernung) festlegen.</p>
           </div>
           <div class="card">
-            <h3>III<br />Ergebnis</h3>
+            <h3>Ergebnis</h3>
             <p>Aufschläge auf Probe, zusätzliche Aktionen und TP.</p>
           </div>
         </div>
       </header>
       <main>
         <h2>1. Waffe auswählen</h2>
+        <ol>
+          <li>Diskus</li>
+          <li>Elfenbogen</li>
+          <li>Kurzbogen</li>
+          <li>Langbogen</li>
+          <li>Leichte Armbrust</li>
+          <li>Windenarmbrust</li>
+          <li>Wurfbeil</li>
+          <li>Wurfdolch</li>
+          <li>Wurfstern</li>
+        </ol>
       </main>
       <footer>
         <h2>2. Sonderfertigkeiten</h2>
