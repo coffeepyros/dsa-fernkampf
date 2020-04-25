@@ -1,0 +1,177 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* FARBEN
+------------------------------
+#5E553E - Dunkelgelb
+#F7EDD5 - Hellgelb
+#aa9e82 - Mitte Sepia
+#35425E - Dunkelblau
+#828FAB - Hellblau
+------------------------------
+*/
+
+/* TYPO */
+@font-face {
+  font-family: "fontin_sans_small_caps";
+  src: url("../webfontkit/fontin_sans_sc_45b-webfont.woff2") format("woff2"),
+    url("../webfontkit/fontin_sans_sc_45b-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body,
+button {
+  font-family: fontin_sans_small_caps;
+}
+
+/* SONSTIGES */
+
+h1 {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: -0.05rem;
+  background-color: #222;
+  color: #fff;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  fill: #fff;
+  /* margin: 7px 14px -7px 14px; */
+  background-color: #222;
+}
+h2 {
+  font-weight: 400;
+  font-size: 1.33rem;
+  letter-spacing: -0.067rem;
+  background-color: #333;
+  color: #ccc;
+}
+#layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 23.6fr 38.2fr 38.2fr; /* Golden Ratio */
+}
+@media (min-width: 800px) {
+  #layout {
+    max-width: 75vh; /* 16:9 ratio */
+    margin: auto;
+  }
+}
+header {
+  background-color: #eee;
+}
+#overview {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 3rem auto;
+  grid-template-areas:
+    "logo title title title title title"
+    "card-1 card-1 card-2 card-2 card-3 card-3";
+  grid-gap: 0.33rem;
+}
+#overview h1 {
+  grid-area: title;
+  text-align: center;
+}
+#overview .card {
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 95%);
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+#overview .card.active {
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 20%);
+  border: 1px dashed hsl(0, 0%, 20%);
+}
+
+#overview .card:nth-of-type(1) {
+  grid-area: card-1;
+}
+#overview .card:nth-of-type(2) {
+  grid-area: card-2;
+}
+#overview .card:nth-of-type(3) {
+  grid-area: card-3;
+}
+#overview h3 {
+  margin: 0;
+  font-size: 1.16rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 0 0.5rem;
+  border-bottom: 1px solid #333;
+}
+#overview ol,
+#overview p {
+  margin-top: 0.5rem;
+}
+#overview ol {
+  padding: 0 0 0 1rem;
+}
+#overview li {
+  margin-top: 0.33rem;
+  list-style-type: decimal;
+}
+main {
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2rem auto;
+}
+h2 {
+  line-height: 2rem;
+  padding-left: 0.5rem;
+}
+main ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+main li {
+  background-color: #aa9e82;
+}
+.waffen-auswahl {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: hsl(221, 28%, 20%);
+  font-size: x-large;
+  letter-spacing: -0.075rem;
+  text-decoration: none;
+}
+.waffen-auswahl:hover {
+  background-color: hsl(16, 100%, 42%);
+  color: hsl(42, 68%, 90%);
+}
+footer {
+  background-color: #ccc;
+}
+.btn-weiter {
+  background-color: hsl(16, 100%, 42%);
+  font-size: 1.25rem;
+  padding: 0.67rem 1.33rem;
+  margin: 0;
+  border: 0;
+}
+.btn-weiter:hover {
+  background-color: hsl(16, 100%, 50%);
+}

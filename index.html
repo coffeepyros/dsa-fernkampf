@@ -5,130 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/css-reset.css" />
-    <style>
-      @font-face {
-        font-family: "fontin_sans_small_caps";
-        src: url("webfontkit/fontin_sans_sc_45b-webfont.woff2") format("woff2"),
-          url("webfontkit/fontin_sans_sc_45b-webfont.woff") format("woff");
-        font-weight: normal;
-        font-style: normal;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body,
-      h1,
-      h2,
-      h3 {
-        margin: 0;
-      }
-      body,
-      button {
-        font-family: fontin_sans_small_caps;
-      }
-      h1 {
-        font-weight: 400;
-        font-size: 2rem;
-        line-height: 3rem;
-        letter-spacing: -0.05rem;
-        background-color: #222;
-        color: #fff;
-      }
-      .logo {
-        width: 100%;
-        height: 100%;
-        padding: 0.5rem;
-        fill: #fff;
-        /* margin: 7px 14px -7px 14px; */
-        background-color: #222;
-      }
-      h2 {
-        font-weight: 400;
-        font-size: 1.33rem;
-        letter-spacing: -0.067rem;
-        background-color: #333;
-        color: #ccc;
-        padding: 0.33rem;
-      }
-      #layout {
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 23.6fr 38.2fr 38.2fr; /* Golden Ratio */
-      }
-      @media (min-width: 800px) {
-        #layout {
-          max-width: 75vh; /* 16:9 ratio */
-          margin: auto;
-        }
-      }
-      header {
-        background-color: #eee;
-      }
-      #overview {
-        height: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 3rem auto;
-        grid-template-areas:
-          "logo title title title title title"
-          "card-1 card-1 card-2 card-2 card-3 card-3";
-        grid-gap: 0.33rem;
-      }
-      #overview h1 {
-        grid-area: title;
-        text-align: center;
-      }
-      #overview .card {
-        background-color: rgb(170, 158, 130);
-        margin-bottom: 0.5rem;
-        padding: 0.5rem;
-      }
-      #overview .card:nth-of-type(1) {
-        grid-area: card-1;
-      }
-      #overview .card:nth-of-type(2) {
-        grid-area: card-2;
-      }
-      #overview .card:nth-of-type(3) {
-        grid-area: card-3;
-      }
-      #overview h3 {
-        margin: 0;
-        font-size: 1.16rem;
-        font-weight: 400;
-        text-align: center;
-        padding: 0 0 0.5rem;
-        border-bottom: 1px solid #333;
-      }
-      #overview ol,
-      #overview p {
-        margin-top: 0.5rem;
-      }
-      #overview ol {
-        padding: 0 0 0 1rem;
-      }
-      #overview li {
-        margin-top: 0.33rem;
-        list-style-type: circle;
-      }
-      main {
-        background-color: #ddd;
-      }
-      footer {
-        background-color: #ccc;
-      }
-      .btn-weiter {
-        background-color: hsl(16, 100%, 42%);
-        font-size: 1.25rem;
-        padding: 0.67rem 1.33rem;
-        margin: 0;
-        border: 0;
-      }
-      .btn-weiter:hover {
-        background-color: hsl(16, 100%, 50%);
-      }
-    </style>
+    <link rel="stylesheet" href="css/crimson.css" />
   </head>
   <body>
     <div id="layout">
@@ -136,7 +13,7 @@
         <div id="overview">
           <img class="logo" src="img/archery.svg" alt="Icon" />
           <h1>DSA Fernkampf</h1>
-          <div class="card">
+          <div class="card active">
             <h3>Startseite</h3>
             <ol>
               <li>Waffe auswählen.</li>
@@ -155,17 +32,17 @@
       </header>
       <main>
         <h2>1. Waffe auswählen</h2>
-        <ol>
-          <li>Diskus</li>
-          <li>Elfenbogen</li>
-          <li>Kurzbogen</li>
-          <li>Langbogen</li>
-          <li>Leichte Armbrust</li>
-          <li>Windenarmbrust</li>
-          <li>Wurfbeil</li>
-          <li>Wurfdolch</li>
-          <li>Wurfstern</li>
-        </ol>
+        <ul>
+          <li><a class="waffen-auswahl" href="#">Diskus</a></li>
+          <li><a class="waffen-auswahl" href="#">Elfenbogen</a></li>
+          <li><a class="waffen-auswahl" href="#">Kurzbogen</a></li>
+          <li><a class="waffen-auswahl" href="#">Langbogen</a></li>
+          <li><a class="waffen-auswahl" href="#">Leichte Armbrust</a></li>
+          <li><a class="waffen-auswahl" href="#">Windenarmbrust</a></li>
+          <li><a class="waffen-auswahl" href="#">Wurfbeil</a></li>
+          <li><a class="waffen-auswahl" href="#">Wurfdolch</a></li>
+          <li><a class="waffen-auswahl" href="#">Wurfstern</a></li>
+        </ul>
       </main>
       <footer>
         <h2>2. Sonderfertigkeiten</h2>
