@@ -175,3 +175,7 @@ footer {
 .btn-weiter:hover {
   background-color: hsl(16, 100%, 50%);
 }
+input[type="checkbox"],
+label {
+  cursor: pointer;
+}
